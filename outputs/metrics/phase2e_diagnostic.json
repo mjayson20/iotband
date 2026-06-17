@@ -1,0 +1,48 @@
+{
+  "phase": "2E \u2014 Threshold Diagnostic (no test split)",
+  "candidate_config": {
+    "scaler": "RobustScaler",
+    "features": [
+      "dur",
+      "proto",
+      "service",
+      "state",
+      "sbytes",
+      "dbytes",
+      "rate",
+      "sload",
+      "sinpkt",
+      "smean",
+      "dmean"
+    ],
+    "n_features": 11,
+    "note": "Count-corrected from Phase 2D 'drop dload+dinpkt' (was mislabeled as 10, actually 11)"
+  },
+  "auc_full_test_set": 0.9267,
+  "default_threshold_050": {
+    "threshold": 0.5,
+    "f1": 0.7299,
+    "precision": 0.5864,
+    "recall": 0.9664,
+    "fpr": 0.3454
+  },
+  "best_f1_threshold_unconstrained": {
+    "threshold": 0.74,
+    "f1": 0.7788,
+    "precision": 0.7394,
+    "recall": 0.8226,
+    "fpr": 0.1469
+  },
+  "best_f1_threshold_recall_constrained": {
+    "threshold": 0.67,
+    "f1": 0.7701,
+    "precision": 0.6827,
+    "recall": 0.883,
+    "fpr": 0.208
+  },
+  "f1_gain_available": 0.0489,
+  "verdict": "MINIMAL UNTAPPED PERFORMANCE \u2014 threshold is not the lever",
+  "action": "Best achievable F1 at threshold=0.74 is only 0.7788.\nThreshold tuning will not close the gap. Feature drift remains\nthe dominant factor. Consider architecture change as next step.",
+  "note": "Full UNSW-NB15 test set (46,391 samples) remains untouched as a benchmark. No calibration/holdout split performed. No threshold is locked. Pipeline not yet declared final.",
+  "plot": "D:\\IoT-Research-Project\\outputs\\metrics\\E03_threshold_sweep_diagnostic.png"
+}

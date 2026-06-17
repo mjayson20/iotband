@@ -1,0 +1,70 @@
+{
+  "phase": "2D \u2014 Feature Drop Experiment",
+  "scaler": "RobustScaler",
+  "experiments": [
+    {
+      "label": "13 features (baseline)",
+      "accuracy": 0.7388,
+      "f1_attack": 0.7129,
+      "precision": 0.5655,
+      "recall_attack": 0.9641,
+      "roc_auc": 0.9066,
+      "fpr": 0.3754,
+      "tp": 15044,
+      "tn": 19229,
+      "fp": 11558,
+      "fn": 560,
+      "normal_flagged_as_attack": 11558,
+      "total_normal": 30787,
+      "overlap": 0.3514,
+      "ks_stat": 0.6481,
+      "meets_target": false
+    },
+    {
+      "label": "11 features (drop dload)",
+      "accuracy": 0.7557,
+      "f1_attack": 0.7264,
+      "precision": 0.5827,
+      "recall_attack": 0.9641,
+      "roc_auc": 0.9229,
+      "fpr": 0.35,
+      "tp": 15044,
+      "tn": 20013,
+      "fp": 10774,
+      "fn": 560,
+      "normal_flagged_as_attack": 10774,
+      "total_normal": 30787,
+      "overlap": 0.3316,
+      "ks_stat": 0.6689,
+      "meets_target": false
+    },
+    {
+      "label": "10 features (drop dload+dinpkt)",
+      "accuracy": 0.7594,
+      "f1_attack": 0.7299,
+      "precision": 0.5864,
+      "recall_attack": 0.9664,
+      "roc_auc": 0.9267,
+      "fpr": 0.3454,
+      "tp": 15079,
+      "tn": 20152,
+      "fp": 10635,
+      "fn": 525,
+      "normal_flagged_as_attack": 10635,
+      "total_normal": 30787,
+      "overlap": 0.3217,
+      "ks_stat": 0.6787,
+      "meets_target": false
+    }
+  ],
+  "verdict": {
+    "best_variant": "10 features (drop dload+dinpkt)",
+    "f1_gain": 0.017,
+    "precision_gain": 0.0209,
+    "fpr_reduction": 0.03,
+    "fpr_reduction_pct": 8.0,
+    "overlap_drop": 0.0297,
+    "decision": "DLOAD IS A SYMPTOM \u2014 ROOT CAUSE LIES ELSEWHERE",
+    "action": "Feature removal did not move the metrics meaningfully.\nThe distribution shift is pervasive across features, not localised.\nNext steps:\n  1. Increase MLP to hidden_layer_sizes=(64, 32), alpha=0.005\n  2. Retrain and re-diagnose\n  3. If still failing, the UNSW train/test temporal gap is too\n     large for this feature set \u2014 reconsider feature engineering."
+  }
+}

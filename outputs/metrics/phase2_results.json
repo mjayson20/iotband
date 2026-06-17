@@ -1,0 +1,120 @@
+{
+  "phase": "2 \u2014 Model Training (UNSW-NB15)",
+  "features": [
+    "dur",
+    "proto",
+    "service",
+    "state",
+    "sbytes",
+    "dbytes",
+    "rate",
+    "sload",
+    "dload",
+    "sinpkt",
+    "dinpkt",
+    "smean",
+    "dmean"
+  ],
+  "n_features": 13,
+  "train_size": 89090,
+  "test_size": 46391,
+  "results": {
+    "decision_tree": {
+      "model": "decision_tree",
+      "accuracy": 0.7512,
+      "f1_attack": 0.7251,
+      "precision": 0.577,
+      "recall_attack": 0.9754,
+      "roc_auc": 0.9414,
+      "confusion_matrix": [
+        [
+          19629,
+          11158
+        ],
+        [
+          384,
+          15220
+        ]
+      ],
+      "tp": 15220,
+      "tn": 19629,
+      "fp": 11158,
+      "fn": 384,
+      "false_negative_rate": 0.0246,
+      "meets_target": false,
+      "cv_accuracy_mean": 0.9022,
+      "cv_accuracy_std": 0.0017,
+      "cv_f1_mean": 0.9026,
+      "cv_f1_std": 0.0017,
+      "train_accuracy_mean": 0.9034,
+      "train_f1_mean": 0.9039,
+      "overfit_gap_f1": 0.0012,
+      "model_path": "d:\\IoT-Research-Project\\models\\decision_tree_model.pkl"
+    },
+    "random_forest": {
+      "model": "random_forest",
+      "accuracy": 0.754,
+      "f1_attack": 0.7306,
+      "precision": 0.5783,
+      "recall_attack": 0.9915,
+      "roc_auc": 0.948,
+      "confusion_matrix": [
+        [
+          19507,
+          11280
+        ],
+        [
+          132,
+          15472
+        ]
+      ],
+      "tp": 15472,
+      "tn": 19507,
+      "fp": 11280,
+      "fn": 132,
+      "false_negative_rate": 0.0085,
+      "meets_target": false,
+      "cv_accuracy_mean": 0.9029,
+      "cv_accuracy_std": 0.0017,
+      "cv_f1_mean": 0.9046,
+      "cv_f1_std": 0.0014,
+      "train_accuracy_mean": 0.9043,
+      "train_f1_mean": 0.9059,
+      "overfit_gap_f1": 0.0013,
+      "model_path": "d:\\IoT-Research-Project\\models\\random_forest_model.pkl"
+    },
+    "mlp": {
+      "model": "mlp",
+      "accuracy": 0.7281,
+      "f1_attack": 0.7061,
+      "precision": 0.5547,
+      "recall_attack": 0.971,
+      "roc_auc": 0.8945,
+      "confusion_matrix": [
+        [
+          18626,
+          12161
+        ],
+        [
+          453,
+          15151
+        ]
+      ],
+      "tp": 15151,
+      "tn": 18626,
+      "fp": 12161,
+      "fn": 453,
+      "false_negative_rate": 0.029,
+      "meets_target": false,
+      "cv_accuracy_mean": 0.8906,
+      "cv_accuracy_std": 0.0034,
+      "cv_f1_mean": 0.8937,
+      "cv_f1_std": 0.0025,
+      "train_accuracy_mean": 0.8922,
+      "train_f1_mean": 0.8953,
+      "overfit_gap_f1": 0.0016,
+      "model_path": "d:\\IoT-Research-Project\\models\\mlp_model.pkl"
+    }
+  },
+  "best_model": "random_forest"
+}

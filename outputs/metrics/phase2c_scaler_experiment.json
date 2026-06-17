@@ -1,0 +1,40 @@
+{
+  "phase": "2C \u2014 Scaler Sensitivity Experiment",
+  "hypothesis": "RobustScaler reduces normalisation-amplified drift",
+  "standard_scaler": {
+    "scaler": "StandardScaler",
+    "accuracy": 0.7281,
+    "f1_attack": 0.7061,
+    "precision": 0.5547,
+    "recall_attack": 0.971,
+    "roc_auc": 0.8945,
+    "overlap": {
+      "overlap": 0.4173,
+      "ks_stat": 0.5781,
+      "mean_prob_normal": 0.2958,
+      "mean_prob_attack": 0.822,
+      "std_prob_normal": 0.341
+    },
+    "meets_target": false
+  },
+  "robust_scaler": {
+    "scaler": "RobustScaler",
+    "accuracy": 0.7388,
+    "f1_attack": 0.7129,
+    "precision": 0.5655,
+    "recall_attack": 0.9641,
+    "roc_auc": 0.9066,
+    "overlap": {
+      "overlap": 0.3514,
+      "ks_stat": 0.6481,
+      "mean_prob_normal": 0.2928,
+      "mean_prob_attack": 0.8546,
+      "std_prob_normal": 0.3499
+    },
+    "meets_target": false
+  },
+  "f1_delta": 0.0068,
+  "overlap_delta": -0.0659,
+  "verdict": "PARTIAL SUPPORT",
+  "action": "RobustScaler shows modest improvement. Worth switching,\nbut the root cause may be deeper than scaler choice alone.\nAfter switching, if F1 still < 0.88, investigate feature dropping:\n  Remove dload, dbytes, dmean, dinpkt from FINAL_FEATURES in train.py\n  (these 4 showed the highest mean shift in the drift analysis)."
+}

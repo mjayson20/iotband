@@ -1,0 +1,86 @@
+{
+  "phase": "2E \u2014 Threshold Calibration (Locked Config)",
+  "locked_config": {
+    "scaler": "RobustScaler",
+    "features": [
+      "dur",
+      "proto",
+      "service",
+      "state",
+      "sbytes",
+      "dbytes",
+      "rate",
+      "sload",
+      "sinpkt",
+      "smean",
+      "dmean"
+    ],
+    "n_features": 11,
+    "mlp_params": {
+      "hidden_layer_sizes": "(32, 16)",
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": "0.001",
+      "batch_size": "256",
+      "learning_rate_init": "0.001",
+      "max_iter": "200",
+      "early_stopping": "True",
+      "validation_fraction": "0.1",
+      "n_iter_no_change": "10",
+      "random_state": "42"
+    }
+  },
+  "methodological_note": "Threshold calibrated on 50% of official UNSW-NB15 test set. Final metrics reported on the other 50%, which was not used in training, scaling, or threshold selection. This 50% becomes the de facto holdout for this configuration.",
+  "calibration_split": {
+    "n": 23195,
+    "attack_pct": 33.64,
+    "auc": 0.9251,
+    "best_threshold": 0.74,
+    "best_f1": 0.7747,
+    "best_precision": 0.7382,
+    "best_recall": 0.8149
+  },
+  "final_eval_split": {
+    "n": 23196,
+    "attack_pct": 33.64
+  },
+  "default_threshold_result": {
+    "label": "Default (t=0.50)",
+    "threshold": 0.5,
+    "accuracy": 0.7575,
+    "f1_attack": 0.7289,
+    "precision": 0.584,
+    "recall_attack": 0.9694,
+    "fpr": 0.3499,
+    "tp": 7563,
+    "tn": 10007,
+    "fp": 5387,
+    "fn": 239,
+    "meets_target": false
+  },
+  "calibrated_threshold_result": {
+    "label": "Calibrated (t=0.74)",
+    "threshold": 0.74,
+    "accuracy": 0.8451,
+    "f1_attack": 0.7829,
+    "precision": 0.7406,
+    "recall_attack": 0.8303,
+    "fpr": 0.1474,
+    "tp": 6478,
+    "tn": 13125,
+    "fp": 2269,
+    "fn": 1324,
+    "meets_target": false
+  },
+  "gate_check": {
+    "f1_pass": false,
+    "recall_pass": false,
+    "verdict": "AT EXPECTED CEILING \u2014 DOCUMENT AND PROCEED TO PHASE 3",
+    "threshold_used": 0.74
+  },
+  "plots": {
+    "roc_curve": "D:\\IoT-Research-Project\\outputs\\metrics\\E01_roc_curve.png",
+    "pr_curve": "D:\\IoT-Research-Project\\outputs\\metrics\\E02_pr_curve.png",
+    "threshold_sweep": "D:\\IoT-Research-Project\\outputs\\metrics\\E03_threshold_vs_metrics.png"
+  }
+}

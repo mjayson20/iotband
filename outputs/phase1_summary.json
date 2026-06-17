@@ -1,0 +1,92 @@
+{
+  "phase": "1 \u2014 UNSW-NB15 Preprocessing",
+  "train_shape_raw": [
+    175341,
+    36
+  ],
+  "train_shape_clean": [
+    89090,
+    18
+  ],
+  "test_shape_clean": [
+    46391,
+    18
+  ],
+  "n_features": 17,
+  "features": [
+    "dur",
+    "proto",
+    "service",
+    "state",
+    "spkts",
+    "dpkts",
+    "sbytes",
+    "dbytes",
+    "rate",
+    "sload",
+    "dload",
+    "sloss",
+    "dloss",
+    "sinpkt",
+    "dinpkt",
+    "smean",
+    "dmean"
+  ],
+  "class_balance": {
+    "counts": {
+      "0": 47537,
+      "1": 41553
+    },
+    "percentages": {
+      "0": 53.36,
+      "1": 46.64
+    },
+    "imbalance_ratio": 1.14,
+    "recommend_smote": false
+  },
+  "high_corr_pairs": [
+    [
+      "sbytes",
+      "spkts",
+      0.968
+    ],
+    [
+      "dbytes",
+      "dpkts",
+      0.971
+    ],
+    [
+      "sloss",
+      "spkts",
+      0.975
+    ],
+    [
+      "sloss",
+      "sbytes",
+      0.997
+    ],
+    [
+      "dloss",
+      "dpkts",
+      0.977
+    ],
+    [
+      "dloss",
+      "dbytes",
+      0.997
+    ]
+  ],
+  "outputs": {
+    "train_parquet": "d:\\IoT-Research-Project\\data\\processed\\unsw_train_clean.parquet",
+    "test_parquet": "d:\\IoT-Research-Project\\data\\processed\\unsw_test_clean.parquet",
+    "scaler_params": "d:\\IoT-Research-Project\\models\\scaler_params.json",
+    "label_encoders": "d:\\IoT-Research-Project\\models\\label_encoders.json",
+    "eda_plots": {
+      "01_class_distribution.png": "d:\\IoT-Research-Project\\outputs\\eda\\01_class_distribution.png",
+      "02_feature_distributions.png": "d:\\IoT-Research-Project\\outputs\\eda\\02_feature_distributions.png",
+      "03_correlation_heatmap.png": "d:\\IoT-Research-Project\\outputs\\eda\\03_correlation_heatmap.png",
+      "04_outlier_summary.png": "d:\\IoT-Research-Project\\outputs\\eda\\04_outlier_summary.png",
+      "05_mutual_info.png": "d:\\IoT-Research-Project\\outputs\\eda\\05_mutual_info.png"
+    }
+  }
+}

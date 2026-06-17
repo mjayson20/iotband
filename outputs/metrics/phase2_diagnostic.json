@@ -1,0 +1,169 @@
+{
+  "phase": "2 \u2014 Diagnostic",
+  "probability_overlap": {
+    "overlap_coefficient": 0.4173,
+    "ks_statistic": 0.5781,
+    "ks_pvalue": 0.0,
+    "mean_prob_normal": 0.2958,
+    "mean_prob_attack": 0.822,
+    "std_prob_normal": 0.341,
+    "std_prob_attack": 0.1653,
+    "verdict": "CONCERNING \u2014 significant overlap. Calibration has limited effect. Check feature drift.",
+    "calibration_viable": false,
+    "plot": "D:\\IoT-Research-Project\\outputs\\metrics\\D01_probability_overlap.png"
+  },
+  "feature_drift": {
+    "drift_table": [
+      {
+        "feature": "dload",
+        "ks_normal": 0.232,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0583,
+        "ks_attack_pval": 5.205688493062532e-34,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": 0.334,
+        "test_normal_mean": 0.1023,
+        "mean_shift_pct": 69.37
+      },
+      {
+        "feature": "dbytes",
+        "ks_normal": 0.2022,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0273,
+        "ks_attack_pval": 8.725934430559505e-08,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": 0.0405,
+        "test_normal_mean": -0.0317,
+        "mean_shift_pct": 178.33
+      },
+      {
+        "feature": "dmean",
+        "ks_normal": 0.1984,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0235,
+        "ks_attack_pval": 7.1570294565010974e-06,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": 0.1779,
+        "test_normal_mean": -0.0949,
+        "mean_shift_pct": 153.37
+      },
+      {
+        "feature": "rate",
+        "ks_normal": 0.1899,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0853,
+        "ks_attack_pval": 2.687693484220085e-72,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": -0.0869,
+        "test_normal_mean": -0.0465,
+        "mean_shift_pct": 46.48
+      },
+      {
+        "feature": "sinpkt",
+        "ks_normal": 0.1807,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0827,
+        "ks_attack_pval": 6.0190130344537264e-68,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": 0.0348,
+        "test_normal_mean": 0.0318,
+        "mean_shift_pct": 8.57
+      },
+      {
+        "feature": "dinpkt",
+        "ks_normal": 0.1602,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0951,
+        "ks_attack_pval": 8.075240269598552e-90,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": -0.0118,
+        "test_normal_mean": 0.0028,
+        "mean_shift_pct": 123.29
+      },
+      {
+        "feature": "sload",
+        "ks_normal": 0.158,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0572,
+        "ks_attack_pval": 9.287772584895674e-33,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": -0.0806,
+        "test_normal_mean": -0.0344,
+        "mean_shift_pct": 57.36
+      },
+      {
+        "feature": "dur",
+        "ks_normal": 0.1503,
+        "ks_normal_pval": 0.0,
+        "ks_attack": 0.0736,
+        "ks_attack_pval": 6.884464531517719e-54,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": -0.0809,
+        "test_normal_mean": -0.0897,
+        "mean_shift_pct": 10.91
+      },
+      {
+        "feature": "sbytes",
+        "ks_normal": 0.1397,
+        "ks_normal_pval": 1.41519e-318,
+        "ks_attack": 0.0195,
+        "ks_attack_pval": 0.00035285039359112956,
+        "normal_drift_level": "moderate",
+        "train_normal_mean": -0.0482,
+        "test_normal_mean": -0.048,
+        "mean_shift_pct": 0.47
+      },
+      {
+        "feature": "smean",
+        "ks_normal": 0.0772,
+        "ks_normal_pval": 2.3317689219995513e-97,
+        "ks_attack": 0.014,
+        "ks_attack_pval": 0.023044284855819972,
+        "normal_drift_level": "minimal",
+        "train_normal_mean": -0.1412,
+        "test_normal_mean": -0.0864,
+        "mean_shift_pct": 38.83
+      },
+      {
+        "feature": "service",
+        "ks_normal": 0.0708,
+        "ks_normal_pval": 6.508916273533929e-82,
+        "ks_attack": 0.0568,
+        "ks_attack_pval": 3.2733518595069057e-32,
+        "normal_drift_level": "minimal",
+        "train_normal_mean": -0.1667,
+        "test_normal_mean": -0.3121,
+        "mean_shift_pct": 87.24
+      },
+      {
+        "feature": "proto",
+        "ks_normal": 0.0356,
+        "ks_normal_pval": 4.747297841910671e-21,
+        "ks_attack": 0.0126,
+        "ks_attack_pval": 0.053023003521578294,
+        "normal_drift_level": "minimal",
+        "train_normal_mean": 0.0391,
+        "test_normal_mean": 0.0311,
+        "mean_shift_pct": 20.44
+      },
+      {
+        "feature": "state",
+        "ks_normal": 0.0172,
+        "ks_normal_pval": 3.002296603437837e-05,
+        "ks_attack": 0.0158,
+        "ks_attack_pval": 0.006691874026349293,
+        "normal_drift_level": "minimal",
+        "train_normal_mean": -0.2724,
+        "test_normal_mean": -0.2214,
+        "mean_shift_pct": 18.71
+      }
+    ],
+    "high_drift_features": [],
+    "n_high_drift": 0,
+    "plot": "D:\\IoT-Research-Project\\outputs\\metrics\\D02_feature_drift.png"
+  },
+  "verdict": {
+    "decision": "RETRAIN_WITH_ROBUST_SCALING",
+    "action": "Significant probability overlap (0.417) despite low feature drift.\nModel capacity may be insufficient. Retrain MLP with:\n  hidden_layer_sizes=(64, 32)\n  alpha=0.005\nThen re-run this diagnostic."
+  }
+}
