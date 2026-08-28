@@ -1,0 +1,33 @@
+{
+  "raw_shape": [
+    595376,
+    12
+  ],
+  "processed_shape": [
+    39008,
+    13
+  ],
+  "n_normal": 3091,
+  "n_attack": 35917,
+  "imbalance_ratio": 11.62,
+  "features_derived": [
+    "dur",
+    "sbytes",
+    "dbytes",
+    "rate",
+    "sload",
+    "sinpkt",
+    "smean",
+    "dmean"
+  ],
+  "features_approx": [
+    "proto"
+  ],
+  "features_missing_filled": {
+    "service": "filled with UNSW-NB15 mode='-'",
+    "state": "filled with UNSW-NB15 mode='FIN'"
+  },
+  "scaler": "NOT applied here \u2014 scaler_locked.pkl applied in botiot_evaluate.py before inference",
+  "encoders": "locked UNSW-NB15 label encoders \u2014 NOT refit on BoT-IoT",
+  "output_path": "C:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\data\\processed\\botiot_clean.parquet"
+}

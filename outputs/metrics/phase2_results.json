@@ -49,7 +49,7 @@
       "train_accuracy_mean": 0.9034,
       "train_f1_mean": 0.9039,
       "overfit_gap_f1": 0.0012,
-      "model_path": "d:\\IoT-Research-Project\\models\\decision_tree_model.pkl"
+      "model_path": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\models\\decision_tree_model.pkl"
     },
     "random_forest": {
       "model": "random_forest",
@@ -81,7 +81,7 @@
       "train_accuracy_mean": 0.9043,
       "train_f1_mean": 0.9059,
       "overfit_gap_f1": 0.0013,
-      "model_path": "d:\\IoT-Research-Project\\models\\random_forest_model.pkl"
+      "model_path": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\models\\random_forest_model.pkl"
     },
     "mlp": {
       "model": "mlp",
@@ -113,7 +113,7 @@
       "train_accuracy_mean": 0.8922,
       "train_f1_mean": 0.8953,
       "overfit_gap_f1": 0.0016,
-      "model_path": "d:\\IoT-Research-Project\\models\\mlp_model.pkl"
+      "model_path": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\models\\mlp_model.pkl"
     }
   },
   "best_model": "random_forest"

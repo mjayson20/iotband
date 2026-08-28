@@ -77,16 +77,16 @@
     ]
   ],
   "outputs": {
-    "train_parquet": "d:\\IoT-Research-Project\\data\\processed\\unsw_train_clean.parquet",
-    "test_parquet": "d:\\IoT-Research-Project\\data\\processed\\unsw_test_clean.parquet",
-    "scaler_params": "d:\\IoT-Research-Project\\models\\scaler_params.json",
-    "label_encoders": "d:\\IoT-Research-Project\\models\\label_encoders.json",
+    "train_parquet": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\data\\processed\\unsw_train_clean.parquet",
+    "test_parquet": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\data\\processed\\unsw_test_clean.parquet",
+    "scaler_params": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\models\\scaler_params.json",
+    "label_encoders": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\models\\label_encoders.json",
     "eda_plots": {
-      "01_class_distribution.png": "d:\\IoT-Research-Project\\outputs\\eda\\01_class_distribution.png",
-      "02_feature_distributions.png": "d:\\IoT-Research-Project\\outputs\\eda\\02_feature_distributions.png",
-      "03_correlation_heatmap.png": "d:\\IoT-Research-Project\\outputs\\eda\\03_correlation_heatmap.png",
-      "04_outlier_summary.png": "d:\\IoT-Research-Project\\outputs\\eda\\04_outlier_summary.png",
-      "05_mutual_info.png": "d:\\IoT-Research-Project\\outputs\\eda\\05_mutual_info.png"
+      "class_distribution": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\outputs\\eda\\01_class_distribution.png",
+      "feature_distributions": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\outputs\\eda\\02_feature_distributions.png",
+      "correlation_heatmap": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\outputs\\eda\\03_correlation_heatmap.png",
+      "outlier_summary": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\outputs\\eda\\04_outlier_summary.png",
+      "mutual_info": "c:\\Users\\Merrill\\Documents\\2026Projects\\iotsecband\\IoT-SecBand-IDS\\outputs\\eda\\05_mutual_info.png"
     }
   }
 }
